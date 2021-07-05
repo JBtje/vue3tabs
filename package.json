@@ -1,0 +1,23 @@
+{
+  "name": "@jbtje/vue3tabs",
+  "version": "1.0.0",
+  "description": "Simple vue3 component to display tabs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JBtje/vue3tabs.git"
+  },
+  "keywords": [
+    "vue3",
+    "tabs"
+  ],
+  "author": "JBtje",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JBtje/vue3tabs/issues"
+  },
+  "homepage": "https://github.com/JBtje/vue3tabs#readme"
+}
