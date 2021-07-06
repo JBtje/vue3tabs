@@ -1,6 +1,6 @@
 {
   "name": "@jbtje/vue3tabs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple vue3 component to display tabs",
   "main": "index.js",
   "scripts": {
