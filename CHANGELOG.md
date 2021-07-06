@@ -2,6 +2,9 @@
 
 All notable changes to `@jbtje/vue3tabs` will be documented in this file
 
+## 1.0.2 - 2021-07-06
+- Fixed: package.js main link
+
 ## 1.0.1 - 2021-07-06
 - Added: Link variable
 - Added: example image in readme
