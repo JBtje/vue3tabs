@@ -36,6 +36,7 @@ import {onMounted, provide, reactive, ref, toRefs} from 'vue';
 export default {
     props: {
         cacheLifetime:            {
+            type:    Number,
             default: 5,
         },
         navClass:                 {

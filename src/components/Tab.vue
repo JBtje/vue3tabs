@@ -3,7 +3,7 @@
              v-show="isActive"
              :aria-hidden="!isActive"
              :class="panelClass"
-             :id="'tab-' + computedId"
+             :id="(link ? '' : 'tab-') + computedId"
              role="tabpanel"
              ref="tab"
     >
@@ -27,6 +27,7 @@ export default {
         },
         name:       {
             type:     String,
+            default:  '',
             required: true,
         },
         panelClass: {
@@ -40,6 +41,10 @@ export default {
         suffix:     {
             type:    String,
             default: '',
+        },
+        link:     {
+            type:    Boolean,
+            default: false,
         },
     },
 
@@ -83,6 +88,7 @@ export default {
             computedId,
             hash,
             isActive,
+            isShown,
         };
     },
 };

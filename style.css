@@ -1,0 +1,115 @@
+.tabs-component {
+    margin: 0;
+}
+
+ul.tabs-component-tabs {
+    margin: 0 0 10px 0;
+    padding: 0;
+    border: 1px solid #c2cfd6;
+}
+
+.tabs-component-tabs {
+    border: solid 1px #ddd;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+@media (min-width: 700px) {
+    .tabs-component-tabs {
+        border: 0;
+        align-items: stretch;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: -1px;
+    }
+}
+
+.tabs-component-tab {
+    position: relative;
+    color: #999;
+    background: #eee;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 0;
+    list-style: none;
+    z-index: 0;
+}
+
+.tabs-component-tab a::before {
+    content: ">";
+    margin-right: 5px;
+}
+
+.tabs-component-tab:hover {
+    cursor: pointer;
+    color: teal !important;
+}
+
+.tabs-component-tab.is-active {
+    color: teal !important;
+    background: white;
+    z-index: 3;
+    border-bottom: none;
+}
+
+.tabs-component-tab.is-disabled * {
+    color: #cdcdcd;
+    cursor: not-allowed !important;
+}
+
+@media (min-width: 700px) {
+    .tabs-component-tab {
+        background-color: #fff;
+        border: solid 1px #ddd;
+        border-radius: 3px 3px 0 0;
+        margin-right: .5em;
+        transition: transform .3s ease;
+        transform: translateY(10px);
+    }
+
+    .tabs-component-tab:hover {
+        transition: transform .3s ease;
+        transform: translateY(2px);
+    }
+
+    .tabs-component-tab.is-active {
+        border-bottom: solid 1px #fff;
+        transform: translateY(2px);
+    }
+
+    .tabs-component-tab a::before {
+        content: "";
+        margin-right: 0;
+    }
+
+    ul.tabs-component-tabs {
+        margin: 0 0 0 0;
+        padding: 0 0 0 10px;
+        border: none;
+    }
+}
+
+.tabs-component-tab-a {
+    align-items: center;
+    color: inherit;
+    display: flex;
+    padding: 0.5rem 1rem 0.8rem;
+    text-decoration: none;
+}
+
+.tabs-component-panels {
+    position: relative;
+    max-height: 100vh;
+    overflow: auto;
+    background: red;
+}
+
+@media (min-width: 700px) {
+    .tabs-component-panels {
+        background-color: #fff;
+        border: solid 1px #ddd;
+        border-radius: 0 6px 6px 6px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+        padding: 2rem;
+    }
+}
