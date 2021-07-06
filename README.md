@@ -1,6 +1,6 @@
 # A Vue component to easily render tabs
 
-[![Latest Version on NPM](https://img.shields.io/npm/v/@jbtje/vue3tabs.svg?style=flat-square)](https://npmjs.com/package/@jbtje/vue3pdf)
+[![Latest Version on NPM](https://img.shields.io/npm/v/@jbtje/vue3tabs.svg?style=flat-square)](https://npmjs.com/package/@jbtje/vue3tabs)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![npm](https://img.shields.io/npm/dt/@jbtje/vue3tabs.svg?style=flat-square)](https://www.npmjs.com/package/@jbtje/vue3tabs)
 
