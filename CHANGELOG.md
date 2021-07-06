@@ -2,6 +2,9 @@
 
 All notable changes to `@jbtje/vue3tabs` will be documented in this file
 
+## 1.0.3 - 2021-07-06
+- Fixed: JS error when scrollWindow is null
+
 ## 1.0.2 - 2021-07-06
 - Fixed: package.js main link
 

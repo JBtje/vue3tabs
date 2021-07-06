@@ -129,7 +129,9 @@ export default {
             context.emit( 'changed', {tab: selectedTab} );
 
             // On change, scroll the scroll windows to the top.
-            scrollWindow.value.scrollTop = 0;
+            if( scrollWindow.value !== null ) {
+                scrollWindow.value.scrollTop = 0;
+            }
 
             state.lastActiveTabHash = state.activeTabHash = selectedTab.hash;
 
