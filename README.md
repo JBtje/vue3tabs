@@ -68,7 +68,7 @@ This is how they can be used:
 When reloading the page the component will
 automatically [display the tab that was previously opened](https://github.com/JBtje/vue3tabs#remembering-the-last-opened-tab).
 
-The rendered output adheres to [the ARIA specification](http://heydonworks.com/practical_aria_examples/#tab-interface).
+The rendered output adheres to [the ARIA specification](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role).
 
 ## Installation
 
@@ -143,12 +143,12 @@ You can change the cache lifetime by passing the lifetime in minutes in the `cac
 component.
 
 ```html
-<tabs cache-lifetime="10">
+<tabs :cache-lifetime="10">
     ...
 </tabs>
 ```
 
-### Auto scrolling the container
+### Auto scrolling the container content
 
 When you press a different tab, the container `scrollWindow` will be scrolled to the top. This only works if you add
 overflow to `tabs-component-panels`.
