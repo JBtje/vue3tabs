@@ -2,7 +2,7 @@
 Object.keys( localStorage ).forEach( function( str ) {
     let item = localStorage.getItem( str );
     let date = new Date();
-    if( item.expires && item.expires < date ) {
+    if( item?.expires < date ) {
         localStorage.removeItem( str );
     }
 } );

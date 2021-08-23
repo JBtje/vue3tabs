@@ -11,7 +11,7 @@
                 role="presentation"
                 @click="selectTab(tab.hash, $event)"
             >
-                <a v-html="tab.header"
+                <a v-html="tab.prefix() + tab.header() + tab.suffix()"
                    :aria-controls="tab.hash"
                    :aria-selected="tab.isActive"
                    :href="tab.hash"

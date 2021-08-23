@@ -26,7 +26,6 @@ export default {
             default: false,
         },
         name:       {
-            type:     String,
             default:  '',
             required: true,
         },
@@ -35,14 +34,12 @@ export default {
             default: 'tabs-component-panel',
         },
         prefix:     {
-            type:    String,
             default: '',
         },
         suffix:     {
-            type:    String,
             default: '',
         },
-        link:     {
+        link:       {
             type:    Boolean,
             default: false,
         },
@@ -54,8 +51,11 @@ export default {
 
         const tabsProvider = inject( 'tabsProvider' );
 
-        const header     = props.prefix + props.name + props.suffix;
-        const computedId = props.id ? props.id : props.name.toLowerCase().replace( / /g, '-' );
+        // Wrap prefix, name and suffix in a function.
+        const prefix     = typeof props.prefix === 'function' ? props.prefix : () => props.prefix;
+        const header     = typeof props.name === 'function' ? props.name : () => props.name;
+        const suffix     = typeof props.suffix === 'function' ? props.suffix : () => props.suffix;
+        const computedId = props.id ? props.id : header().toLowerCase().replace( / /g, '-' );
         const hash       = '#' + (!props.isDisabled ? computedId : '');
 
         watch(
@@ -75,8 +75,9 @@ export default {
 
         onBeforeMount( () => {
             tabsProvider.tabs.push( {
-                name:       props.name,
+                prefix:     prefix,
                 header:     header,
+                suffix:     suffix,
                 isDisabled: props.isDisabled,
                 hash:       hash,
                 index:      tabsProvider.tabs.length,
@@ -84,7 +85,9 @@ export default {
         } );
 
         return {
+            prefix,
             header,
+            suffix,
             computedId,
             hash,
             isActive,
