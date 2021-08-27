@@ -25,6 +25,10 @@ export default {
             type:    Boolean,
             default: false,
         },
+        isHidden:   {
+            type:    Boolean,
+            default: false,
+        },
         name:       {
             default:  '',
             required: true,
@@ -78,7 +82,8 @@ export default {
                 prefix:     prefix,
                 header:     header,
                 suffix:     suffix,
-                isDisabled: props.isDisabled,
+                isDisabled: () => props.isDisabled,
+                isHidden:   () => props.isHidden,
                 hash:       hash,
                 index:      tabsProvider.tabs.length,
             } );

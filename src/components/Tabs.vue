@@ -7,7 +7,8 @@
         >
             <li v-for="(tab, i) in tabs"
                 :key="i"
-                :class="[ navItemClass, tab.isDisabled ? navItemDisabledClass : '', tab.isActive ? navItemActiveClass : '' ]"
+                :class="[ navItemClass, tab.isDisabled() ? navItemDisabledClass : '', tab.isActive ? navItemActiveClass : '' ]"
+                :style="tab.isHidden() ? 'display: none !important' : ''"
                 role="presentation"
                 @click="selectTab(tab.hash, $event)"
             >
@@ -15,7 +16,7 @@
                    :aria-controls="tab.hash"
                    :aria-selected="tab.isActive"
                    :href="tab.hash"
-                   :class="[ navItemLinkClass, tab.isDisabled ? navItemLinkDisabledClass : '', tab.isActive ? navItemLinkActiveClass : '' ]"
+                   :class="[ navItemLinkClass, tab.isDisabled() ? navItemLinkDisabledClass : '', tab.isActive ? navItemLinkActiveClass : '' ]"
                    role="tab"
                 ></a>
             </li>
@@ -112,7 +113,7 @@ export default {
                 return;
             }
 
-            if( selectedTab.isDisabled ) {
+            if( selectedTab.isDisabled() ) {
                 event.preventDefault();
                 return;
             }

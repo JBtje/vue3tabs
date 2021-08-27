@@ -52,6 +52,11 @@ This is how they can be used:
         >
             When you press this tab, the screen scrolls towards the content of the tab.
         </tab>
+        <tab name="Hidden tab"
+             :is-hidden="true"
+        >
+            This tab is not visible, but can be if you set is-hidden to false.
+        </tab>
         <tab panel-class="tabs-component-panel"
              prefix="<svg height='20' width='20' viewBox='0 0 128 128' xmlns='http://www.w3.org/2000/svg'><g><path d='m57.362 26.54-37.262 64.535a7.666 7.666 0 0 0 6.639 11.5h74.518a7.666 7.666 0 0 0 6.639-11.5l-37.258-64.535a7.665 7.665 0 0 0 -13.276 0z' fill='#ffb400'/><g fill='#fcf4d9'><rect height='29.377' rx='4.333' width='9.638' x='59.181' y='46.444'/><circle cx='64' cy='87.428' r='4.819'/></g></g></svg>&nbsp;"
              name="Prefix and suffix"
